@@ -78,8 +78,8 @@
 	font-weight: bold;
 	position: relative;
 	overflow: hidden;
-	margin: 0;
-	padding: 1em 2em;
+	margin: 1em;
+	padding: 2em 2em;
 	color: #fff;
 	border: 2px solid;
 	border-radius: 40px;
@@ -94,17 +94,17 @@
 
 .action__label {
 	display: inline-block;
-	margin: 0 0 0 0.75em;
+	
 }
 
 .action__label--hidden {
 	position: absolute;
-	top: 200%;
+	top: 100%;
 }
 
 .action--play {
 	display: block;
-	margin: 1em auto;
+	margin: 4em auto;
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transition: opacity 0.3s 0.1s;
