@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webeing</title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}?after" />
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo"><a href="index.html">로고 <span>및 간단한 설명</span></a></div>
+    <nav id="navbar">
+        <ul>
+    
+          {% if user.is_authenticated %}
+          <li class="nav-item-le"><a href="">마이페이지</a></li>
+          <li class="nav-item-le"><a href="" id="logout_button">로그아웃</a></li>
+    
+          {% else %}
+          <li class="nav-item-le"><a href="" id="signup_button">Sign Up</a></li>
+          <li class="nav-item-le"><a href="" id="signup_button">Sign In</a></li>
+    
+          {% endif%}
+        </ul>
+      </nav>
+  </header>
+  
+  <!-- Nav -->
+  <!-- <nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav> -->
+
+  <!-- Banner -->
+  <!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+  
+
+
+  {% block content %}
+  {% endblock %}
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/jquery.scrolly.min.js"></script>
+  <script src="../static/js/jquery.scrollex.min.js"></script>
+  <script src="../static/js/skel.min.js"></script>
+  <script src="../static/js/util.js"></script>
+  <script src="../static/js/main.js"></script>
+</body>
+
+</html>
