@@ -56,6 +56,25 @@
             <footer>
                 <a href="generic.html" class="button alt">Learn More</a>
             </footer>
+            <div class="video-wrap">
+                    <div class="video-inner">
+                        <video class="video-player" src="{% static 'media/woods.mp4' %}" preload="auto">
+                            <source src="{% static 'media/woods.webm' %}" type='video/webm; codecs="vp8.0, vorbis"'>
+                            <source src="{% static 'media/woods.ogg' %}" type='video/ogg; codecs="theora, vorbis"'>
+                            <source src="{% static 'media/woods.mp4' %}" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+                            <p>Sorry, but your browser does not support this video format.</p>
+                        </video>
+                        <button class="action action--close"><i class="fa fa-close"></i><span class="action__label action__label--hidden">Close preview</span></button>
+                    </div> <!-- /video-inner -->
+                </div>
+                <div class="content">
+                        <div class="loader">
+                            <i class="fa fa-spinner fa-pulse"></i>
+                        </div>
+                        <button class="action action--hidden action--play">
+                            <button class="fa fa-play"></button><span class="action__label">Watch the video</span>
+                        </button>
+                    </div>
         </article>
     </div>
     <a href="#two" class="more">Learn More</a>
