@@ -5,11 +5,12 @@
         <h1>LOGIN</h1>
         
         </header>
-   <form>
+   <form method='POST' action="{% url 'login' %}">
+   {% csrf_token %}
         <div id="login_wrap">
-        <label for="user"></label><input type="text" placeholder = "ID" id="user">
+        <label for="user"></label><input type="text" placeholder = "ID" id="ID">
         <div class="clear"></div>
-        <label for="user"></label><input type="password" placeholder = "PASSWORD" id="user">
+        <label for="user"></label><input type="password" placeholder = "PASSWORD" id="PASSWORD">
         
         </div>
      <input type="submit" value="login">

@@ -23,8 +23,7 @@
         <ul>
     
           {% if user.is_authenticated %}
-          <li class="nav-item-le"><a href="">마이페이지</a></li>
-          <li class="nav-item-le"><a href="" id="logout_button">로그아웃</a></li>
+          <li class="nav-item-le"><a href="{% url 'logout' %}" id="logout_button">로그아웃</a></li>
     
           {% else %}
           <li class="nav-item-le"><a href="{% url 'login' %}" id="signup_button">Log In</a></li>
