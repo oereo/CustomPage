@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
 
-<section id="banner" class="bg-img" data-bg="headerBackground.jpg">
-    <div class="inner">
-        <header>
-            <h1>0THER FOOD,</h1>
-            <h1>SAVE EARTH</h1>
+{% block header %}
+    <header>
+        <h1>0THER FOOD,</h1>
+        <h1>SAVE EARTH</h1>
         </header>
-        <header>
-            <h2>
-                <div class="wrapper-left">
-                    <div class="user-num">
-                        <p id="counter1"></p>
+    
+    <header>
+        <h2>
+           <div class="wrapper-left">
+               <div class="user-num">   
+                   <p id="counter1"></p>
                     </div>
 
                 </div>
             </h2>
 
         </header>
-    </div>
-</section>
+{% endblock %}
+
+{% block content %}
+
+
 
 <!-- One -->
 <section id="one" class="wrapper post bg-img" data-bg="banner2.jpg">

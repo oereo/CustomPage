@@ -11,14 +11,14 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}?after" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/add.css' %}?after" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/movie.css' %}?after" />
-
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}?after" />
 </head>
 
 <body>
 
   <!-- Header -->
   <header id="header">
-    <div class="logo"><a href="index.html">로고 <span>및 간단한 설명</span></a></div>
+    <div class="logo"><a href="{% url 'home' %}">로고 <span>홈으로 가는 버튼 역할도</span></a></div>
     <nav id="navbar">
         <ul>
     
@@ -27,29 +27,23 @@
           <li class="nav-item-le"><a href="" id="logout_button">로그아웃</a></li>
     
           {% else %}
+          <li class="nav-item-le"><a href="{% url 'login' %}" id="signup_button">Log In</a></li>
           <li class="nav-item-le"><a href="" id="signup_button">Sign Up</a></li>
-          <li class="nav-item-le"><a href="" id="signup_button">Sign In</a></li>
     
           {% endif%}
         </ul>
       </nav>
   </header>
-  
-  <!-- Nav -->
-  <!-- <nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
-				</ul>
-			</nav> -->
+  <section id="banner" class="bg-img" data-bg="headerBackground.jpg">
+    <div class="inner">
 
-  <!-- Banner -->
-  <!--
-			Note: To show a background image, set the "data-bg" attribute below
-			to the full filename of your image. This is used in each section to set
-			the background image.
-		-->
+    {% block header %}
+    {% endblock %}
+        
+    </div>
+</section>
+  
+
   
 
 
