@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header %}
+<header>
+        <h1>Sign Up</h1>
+        
+        </header>
+ 
+<form method='POST' >
+{% comment %} action="{% url 'Signup' %}" {% endcomment %}
+   {% csrf_token %}
+        <div id="signup_wrap">
+            <div class = "form-title">ID</div>
+            <div class = "item-1"><input type="text" placeholder = "ID" id="ID"></div>
+            <div class = "form-title">PASSWORD</div>
+            <div class = "item-1"><input type="password" placeholder = "PASSWORD" id="PASSWORD"></div>
+            <div class = "form-title">PASSWORD-CONFIRM</div>
+            <div class = "item-1"><input type="password" placeholder = "PASSWORD-Confirm" id="PASSWORD1"></div>
+            <div class = "form-title">job</div>
+            <div class = "item-1"><input type="text" placeholder = "job" id="JOB"></div>
+            <div class = "form-title">ADDRESS</div>
+            <div class = "item-1"><input type="text" placeholder = "ADDRESS" id="ADDRESS"></div>
+            
+            {% comment %} <input type="password" placeholder = "PASSWORD-Confirm" id="PASSWORD1"> {% endcomment %}
+
+        </div>
+     <input type="submit" value="signup">
+     </form>
+     
+{% endblock %}
